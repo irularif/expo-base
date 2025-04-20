@@ -61,7 +61,7 @@ const newConfig: ExpoConfig = {
     ],
     "expo-font",
     [
-      "expo-dev-launcher",
+      "expo-dev-client",
       {
         launchMode: "most-recent",
       },

@@ -1,11 +1,11 @@
 {
   "cli": {
-    "version": ">= 12.6.0",
+    "version": "latest",
     "appVersionSource": "remote"
   },
   "build": {
     "base": {
-      "bun": "1.2.10",
+      "bun": "latest",
       "credentialsSource": "remote",
       "android": {
         "image": "latest"
@@ -25,6 +25,7 @@
       }
     },
     "staging": {
+      "autoIncrement": true,
       "extends": "base",
       "channel": "staging",
       "android": {
