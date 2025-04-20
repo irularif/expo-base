@@ -3,13 +3,16 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
-    "start": "expo start --clear",
+    "start": "expo start --clear --offline",
     "android": "DARK_MODE=media expo run:android",
     "ios": "DARK_MODE=media expo run:ios",
     "web": "DARK_MODE=media expo start --web",
     "test": "jest --watchAll",
     "lint": "expo lint",
-    "eas-build-post-install": "./scripts/eas-build-post-install"
+    "eas-build-post-install": "./scripts/eas-build-post-install",
+    "build-staging": "eas build --profile staging --platform",
+    "build-production": "eas build--profile production  --platform",
+    "pull-env": "eas env:pull --environment development"
   },
   "expo": {
     "doctor": {
