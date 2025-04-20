@@ -58,8 +58,9 @@ This project supports environment variables through Expo's configuration system:
 
    ```
    # .env.local
+   MODE=development
+   PROJECT_ID=123123
    EXPO_PUBLIC_API_URL=http://localhost:3000/api
-   EXPO_PUBLIC_APP_VARIANT=development
    EXPO_PUBLIC_SECRET_KEY=123123
    EXPO_PUBLIC_SECRET_PAIR=123123
    EXPO_PUBLIC_SITE_URL=http://localhost:3000
@@ -70,7 +71,7 @@ This project supports environment variables through Expo's configuration system:
 In your code, access variables using process:
 
 ```javascript
-const IS_DEV = process.env.EXPO_PUBLIC_APP_VARIANT === "development";
+const IS_DEV = process.env.MODE === "development";
 ```
 
 ### Secure Environment Variables

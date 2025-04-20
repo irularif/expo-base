@@ -1,42 +1,56 @@
 import { ExpoConfig } from "expo/config";
 
-const IS_DEV = process.env.EXPO_PUBLIC_APP_VARIANT === "development";
+const mode = process.env.MODE;
+const isDev = mode === "development";
+
+const appName = "Base App";
+const appIdentifier = "com.base";
+const projectId = process.env.PROJECT_ID;
 const googleServicesFile = process.env.GOOGLE_SERVICES_JSON;
+const scheme = ["base"];
 const appVersion = "1.0.0";
-const runtimeVersion = "1.0.0";
+
+const owner = "k1project";
+const slug = "base-mobile";
+// This should use to determine the runtime version for ota updates
+// change this for adding new native modules
+// and for the new architecture
+const runtimeVersion = "1.0.0"; 
 
 const getUniqueIdentifier = () => {
-  if (IS_DEV) {
-    return "com.base.dev";
+  if (isDev) {
+    return appIdentifier + ".dev";
   }
 
-  return "com.base";
+  return appIdentifier;
 };
 
 const getAppName = () => {
-  if (IS_DEV) {
-    return "- Base App -";
+  if (isDev) {
+    return `- ${appName} -`;
   }
 
-  return "Base App";
+  return appName;
 };
 
 const newConfig: ExpoConfig = {
   name: getAppName(),
-  slug: "base-mobile",
-  owner: "k1project",
+  slug,
+  owner,
   version: runtimeVersion,
-  scheme: "base",
+  scheme,
   runtimeVersion,
   platforms: ["android", "ios"],
   extra: {
     eas: {
-      projectId: "a3088247-6cda-437a-8ea1-f7b7c04ad06a",
+      projectId,
     },
     appVersion,
+    isDev,
+    mode,
   },
   updates: {
-    url: "https://u.expo.dev/a3088247-6cda-437a-8ea1-f7b7c04ad06a",
+    url: "https://u.expo.dev/" + projectId,
   },
   orientation: "portrait",
   icon: "./app/assets/images/adaptive-icon.png",
