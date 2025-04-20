@@ -27,13 +27,15 @@ You can start developing by editing the files inside the **app** directory. This
 
 ## Project Structure
 
-app/             # Main application code
-├── assets/      # Images, fonts, and other static assets
-├── pages/       # Expo Router pages
-pkgs/            # Modularized code
-├── components/  # Reusable UI components
-├── constants/   # App constants
-├── hooks/       # Custom React hooks
+```
+app/               # Main application code
+├── assets/        # Images, fonts, and other static assets
+├── pages/         # Expo Router pages
+pkgs/              # Modularized code
+├── components/    # Reusable UI components
+├── constants/     # App constants
+├── hooks/         # Custom React hooks
+```
 
 ## Environment Variables
 
