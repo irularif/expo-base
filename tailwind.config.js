@@ -170,10 +170,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: undefined,
-        body: undefined,
-        mono: undefined,
+        inter: ["Inter", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
+        'dancing-script': ["Dancing Script", "sans-serif"],
       },
       fontWeight: {
         extrablack: "950",

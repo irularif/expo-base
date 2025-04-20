@@ -1,0 +1,53 @@
+{
+  "cli": {
+    "version": ">= 12.6.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "base": {
+      "bun": "1.2.10",
+      "credentialsSource": "remote",
+      "android": {
+        "image": "latest"
+      },
+      "ios": {
+        "image": "latest"
+      },
+      "environment": "development"
+    },
+    "development": {
+      "extends": "base",
+      "developmentClient": true,
+      "channel": "development",
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
+      }
+    },
+    "staging": {
+      "extends": "base",
+      "channel": "staging",
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease"
+      },
+      "ios": {
+        "simulator": true
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "extends": "base",
+      "channel": "production",
+      "distribution": "store",
+      "android": {
+        "buildType": "app-bundle",
+        "gradleCommand": ":app:bundleRelease"
+      },
+      "environment": "production"
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
