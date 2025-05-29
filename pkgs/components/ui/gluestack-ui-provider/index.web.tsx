@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useLayoutEffect } from 'react';
-import { config } from './config';
+import { defaultColors } from './defaultColors';
 import { OverlayProvider } from '@gluestack-ui/overlay';
 import { ToastProvider } from '@gluestack-ui/toast';
 import { setFlushStyles } from '@gluestack-ui/nativewind-utils/flush';
@@ -26,13 +26,13 @@ export function GluestackUIProvider({
   children?: React.ReactNode;
 }) {
   let cssVariablesWithMode = ``;
-  Object.keys(config).forEach((configKey) => {
+  Object.keys(defaultColors).forEach((configKey) => {
     cssVariablesWithMode +=
       configKey === 'dark' ? `\n .dark {\n ` : `\n:root {\n`;
     const cssVariables = Object.keys(
-      config[configKey as keyof typeof config]
+      defaultColors[configKey as keyof typeof defaultColors]
     ).reduce((acc: string, curr: string) => {
-      acc += `${curr}:${config[configKey as keyof typeof config][curr]}; `;
+      acc += `${curr}:${defaultColors[configKey as keyof typeof defaultColors][curr]}; `;
       return acc;
     }, '');
     cssVariablesWithMode += `${cssVariables} \n}`;

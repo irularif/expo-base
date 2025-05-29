@@ -1,19 +1,18 @@
-import { Link, Stack } from "expo-router";
-
+import React, { useEffect } from "react";
 import { Text } from "@pkgs/components/ui/text";
-import { Center } from "@pkgs/components/ui/center";
+import { View } from "@pkgs/components/ui/view";
+import { router } from "expo-router";
 
-export default function NotFoundScreen() {
+export default function HomeScreen() {
+  useEffect(() => {
+    setTimeout(() => {
+      router.push("/");
+    }, 3000);
+  }, []);
+
   return (
-    <>
-      <Stack.Screen options={{ title: "Oops!" }} />
-      <Center className="flex-1">
-        <Text className="text-secondary-200">This screen doesn't exist.</Text>
-
-        <Link href="/" style={{ marginTop: 10 }}>
-          <Text className="text-primary-500">Go to home screen!</Text>
-        </Link>
-      </Center>
-    </>
+    <View className="flex-1 items-center justify-center">
+      <Text>Component not found. Redirecting to home page...</Text>
+    </View>
   );
 }

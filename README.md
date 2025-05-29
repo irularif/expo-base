@@ -62,7 +62,6 @@ This project supports environment variables through Expo's configuration system:
    PROJECT_ID=123123
    EXPO_PUBLIC_API_URL=http://localhost:3000/api
    EXPO_PUBLIC_SECRET_KEY=123123
-   EXPO_PUBLIC_SECRET_PAIR=123123
    EXPO_PUBLIC_SITE_URL=http://localhost:3000
    ```
 
