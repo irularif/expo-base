@@ -1,0 +1,14 @@
+import colors from "tailwindcss/colors";
+import { Text } from "@pkgs-ext/gluestack/ui/text";
+import { Switch } from "@pkgs-ext/gluestack/ui/switch";
+import { HStack } from "@pkgs-ext/gluestack/ui/hstack";
+export const examples = [
+  {
+    name: "Switch With Label",
+    Code: function Example() { return (<HStack space="md"><Switch trackColor={{ false: colors.gray[300], true: colors.gray[500] }} thumbColor={colors.gray[50]} activeThumbColor={colors.gray[50]} ios_backgroundColor={colors.gray[300]} /><Text size="sm" >Allow notifications</Text></HStack>); }
+  },
+  {
+    name: "Checked State",
+    Code: function Example() { return (<HStack space="md"><Switch defaultValue={true} trackColor={{ false: colors.gray[300], true: colors.gray[500] }} thumbColor={colors.gray[50]} activeThumbColor={colors.gray[50]} ios_backgroundColor={colors.gray[300]} /><Text size="sm" >Public profile</Text></HStack>); }
+  }
+];

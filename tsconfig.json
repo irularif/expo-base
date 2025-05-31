@@ -12,6 +12,9 @@
       "@assets/*": [
         "./app/assets/*"
       ],
+      "@pkgs-ext/*": [
+        "./pkgs-external/*"
+      ],
       "types/*": [
         "./pkgs/types/*"
       ],
