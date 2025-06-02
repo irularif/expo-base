@@ -8,16 +8,16 @@ import {
   FormControlError,
   FormControlErrorText,
   FormControlErrorIcon,
-} from "@pkgs-ext/gluestack/ui/form-control";
-import { Input, InputField, InputSlot, InputIcon } from "@pkgs-ext/gluestack/ui/input";
-import { AlertCircleIcon } from "@pkgs-ext/gluestack/ui/icon";
-import { Button, ButtonText } from "@pkgs-ext/gluestack/ui/button";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
+} from "@pkgs/components/form-control";
+import { Input, InputField, InputSlot, InputIcon } from "@pkgs/components/input";
+import { AlertCircleIcon } from "@pkgs/components/icon";
+import { Button, ButtonText } from "@pkgs/components/button";
+import { Center } from "@pkgs/components/center";
 import { EyeIcon, EyeOffIcon } from "lucide-react-native";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/form-control";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
+import { Box } from "@pkgs/components/box";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/form-control";
+import { Text } from "@pkgs/components/text";
 
 const FormControlDemo = () => {
   const [isInvalid, setIsInvalid] = React.useState(false);

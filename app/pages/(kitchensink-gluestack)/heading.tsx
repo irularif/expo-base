@@ -1,13 +1,13 @@
 import React from "react";
-import { Heading } from "@pkgs-ext/gluestack/ui/heading";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { HStack } from "@pkgs-ext/gluestack/ui/hstack";
-import { Icon, CircleIcon } from "@pkgs-ext/gluestack/ui/icon";
-import { VStack } from "@pkgs-ext/gluestack/ui/vstack";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/heading";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
+import { Heading } from "@pkgs/components/heading";
+import { Center } from "@pkgs/components/center";
+import { HStack } from "@pkgs/components/hstack";
+import { Icon, CircleIcon } from "@pkgs/components/icon";
+import { VStack } from "@pkgs/components/vstack";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/heading";
+import { Text } from "@pkgs/components/text";
+import { Box } from "@pkgs/components/box";
 
 const HeadingDemo = () => {
   return (

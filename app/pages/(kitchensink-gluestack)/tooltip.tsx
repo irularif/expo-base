@@ -1,19 +1,19 @@
 import React from "react";
-import { Tooltip, TooltipContent, TooltipText } from "@pkgs-ext/gluestack/ui/tooltip";
-import { Button, ButtonIcon } from "@pkgs-ext/gluestack/ui/button";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
+import { Tooltip, TooltipContent, TooltipText } from "@pkgs/components/tooltip";
+import { Button, ButtonIcon } from "@pkgs/components/button";
+import { Text } from "@pkgs/components/text";
+import { Center } from "@pkgs/components/center";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
   ChevronUpIcon,
   ChevronDownIcon,
-} from "@pkgs-ext/gluestack/ui/icon";
-import { VStack } from "@pkgs-ext/gluestack/ui/vstack";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
+} from "@pkgs/components/icon";
+import { VStack } from "@pkgs/components/vstack";
+import { Box } from "@pkgs/components/box";
 import { Platform } from "react-native";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/tooltip";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/tooltip";
 
 const DirectionalTooltip = ({ placement, IconComponent }: any) => {
   const [pressed, setPressed] = React.useState(false);

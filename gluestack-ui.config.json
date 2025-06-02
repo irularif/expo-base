@@ -5,6 +5,6 @@
   },
   "app": {
     "entry": "./app/pages/_layout.tsx",
-    "components": "./pkgs-external/gluestack/ui"
+    "components": "./pkgs/components"
   }
 }

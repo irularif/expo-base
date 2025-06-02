@@ -1,6 +1,6 @@
 import React from "react";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { Button, ButtonText } from "@pkgs-ext/gluestack/ui/button";
+import { Center } from "@pkgs/components/center";
+import { Button, ButtonText } from "@pkgs/components/button";
 import {
   Drawer,
   DrawerBackdrop,
@@ -8,13 +8,13 @@ import {
   DrawerHeader,
   DrawerBody,
   DrawerFooter,
-} from "@pkgs-ext/gluestack/ui/drawer";
-import { Heading } from "@pkgs-ext/gluestack/ui/heading";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
+} from "@pkgs/components/drawer";
+import { Heading } from "@pkgs/components/heading";
+import { Text } from "@pkgs/components/text";
 import { Platform } from "react-native";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/drawer";
+import { Box } from "@pkgs/components/box";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/drawer";
 
 const DrawerDemo = () => {
   const [showDrawer, setShowDrawer] = React.useState(false);

@@ -1,6 +1,6 @@
 import React from "react";
-import { Button, ButtonText } from "@pkgs-ext/gluestack/ui/button";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
+import { Button, ButtonText } from "@pkgs/components/button";
+import { Center } from "@pkgs/components/center";
 import {
   Actionsheet,
   ActionsheetBackdrop,
@@ -9,11 +9,11 @@ import {
   ActionsheetDragIndicatorWrapper,
   ActionsheetItem,
   ActionsheetItemText,
-} from "@pkgs-ext/gluestack/ui/actionsheet";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/actionsheet";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
+} from "@pkgs/components/actionsheet";
+import { examples } from "@app/docs/examples/actionsheet";
+import { Box } from "@pkgs/components/box";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { Text } from "@pkgs/components/text";
 
 const ActionsheetDemo = () => {
   const [showActionsheet, setShowActionsheet] = React.useState(false);

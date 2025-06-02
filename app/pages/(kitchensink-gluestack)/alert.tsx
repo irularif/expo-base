@@ -1,11 +1,11 @@
 import React from "react";
-import { Alert, AlertIcon, AlertText } from "@pkgs-ext/gluestack/ui/alert";
-import { InfoIcon } from "@pkgs-ext/gluestack/ui/icon";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/alert";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
+import { Alert, AlertIcon, AlertText } from "@pkgs/components/alert";
+import { InfoIcon } from "@pkgs/components/icon";
+import { Center } from "@pkgs/components/center";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { Box } from "@pkgs/components/box";
+import { examples } from "@app/docs/examples/alert";
+import { Text } from "@pkgs/components/text";
 
 const AlertDemo = () => {
   return (

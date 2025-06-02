@@ -1,11 +1,11 @@
 import React from "react";
-import { Badge, BadgeText, BadgeIcon } from "@pkgs-ext/gluestack/ui/badge";
-import { GlobeIcon } from "@pkgs-ext/gluestack/ui/icon";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/badge";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
+import { Badge, BadgeText, BadgeIcon } from "@pkgs/components/badge";
+import { GlobeIcon } from "@pkgs/components/icon";
+import { Center } from "@pkgs/components/center";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { Box } from "@pkgs/components/box";
+import { examples } from "@app/docs/examples/badge";
+import { Text } from "@pkgs/components/text";
 
 const BadgeDemo = () => {
   return (

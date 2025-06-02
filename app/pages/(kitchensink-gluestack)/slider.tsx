@@ -4,15 +4,15 @@ import {
   SliderFilledTrack,
   SliderThumb,
   SliderTrack,
-} from "@pkgs-ext/gluestack/ui/slider";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Icon } from "@pkgs-ext/gluestack/ui/icon";
-import HundredEmoji from "@pkgs-ext/gluestack/docs/custom/icons/hundredEmoji";
-import ThumbDownEmoji from "@pkgs-ext/gluestack/docs/custom/icons/thumbDownEmoji";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/slider";
+} from "@pkgs/components/slider";
+import { Center } from "@pkgs/components/center";
+import { Box } from "@pkgs/components/box";
+import { Text } from "@pkgs/components/text";
+import { Icon } from "@pkgs/components/icon";
+import HundredEmoji from "@app/docs/custom/icons/hundredEmoji";
+import ThumbDownEmoji from "@app/docs/custom/icons/thumbDownEmoji";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/slider";
 
 const SliderDemo = () => {
   return (

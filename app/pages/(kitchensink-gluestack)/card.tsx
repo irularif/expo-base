@@ -1,12 +1,12 @@
 import React from "react";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { Card } from "@pkgs-ext/gluestack/ui/card";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Image } from "@pkgs-ext/gluestack/ui/image";
-import { Heading } from "@pkgs-ext/gluestack/ui/heading";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/card";
+import { Center } from "@pkgs/components/center";
+import { Card } from "@pkgs/components/card";
+import { Text } from "@pkgs/components/text";
+import { Image } from "@pkgs/components/image";
+import { Heading } from "@pkgs/components/heading";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { Box } from "@pkgs/components/box";
+import { examples } from "@app/docs/examples/card";
 
 const CardDemo = () => {
   return (

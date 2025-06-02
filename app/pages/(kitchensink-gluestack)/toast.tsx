@@ -4,15 +4,15 @@ import {
   ToastDescription,
   ToastTitle,
   useToast,
-} from "@pkgs-ext/gluestack/ui/toast";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { VStack } from "@pkgs-ext/gluestack/ui/vstack";
-import { CheckIcon, Icon } from "@pkgs-ext/gluestack/ui/icon";
-import { Button, ButtonText } from "@pkgs-ext/gluestack/ui/button";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/toast";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
+} from "@pkgs/components/toast";
+import { Center } from "@pkgs/components/center";
+import { VStack } from "@pkgs/components/vstack";
+import { CheckIcon, Icon } from "@pkgs/components/icon";
+import { Button, ButtonText } from "@pkgs/components/button";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/toast";
+import { Text } from "@pkgs/components/text";
+import { Box } from "@pkgs/components/box";
 
 const ToastDemo = () => {
   const toast = useToast();

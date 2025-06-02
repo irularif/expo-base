@@ -1,12 +1,12 @@
 import "@assets/global.css";
-import { Fab } from "@pkgs-ext/gluestack/ui/fab";
+import { Fab } from "@pkgs/components/fab";
 import {
   ChevronLeftIcon,
   Icon,
   MoonIcon,
   SunIcon,
-} from "@pkgs-ext/gluestack/ui/icon";
-import { Pressable } from "@pkgs-ext/gluestack/ui/pressable";
+} from "@pkgs/components/icon";
+import { Pressable } from "@pkgs/components/pressable";
 import useAppConfig from "@pkgs/hooks/useAppConfig";
 import { AppColorScheme } from "@pkgs/constants/Theme";
 import { Stack, useRouter } from "expo-router";

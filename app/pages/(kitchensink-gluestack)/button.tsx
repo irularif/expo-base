@@ -4,13 +4,13 @@ import {
   Button,
   ButtonText,
   ButtonIcon,
-} from "@pkgs-ext/gluestack/ui/button";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
+} from "@pkgs/components/button";
+import { Center } from "@pkgs/components/center";
 import { LogOut } from "lucide-react-native";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/button";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { Text } from "@pkgs/components/text";
+import { Box } from "@pkgs/components/box";
+import { examples } from "@app/docs/examples/button";
 
 const ButtonDemo = () => {
   return (

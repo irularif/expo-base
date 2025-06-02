@@ -3,24 +3,11 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "@app/*": [
-        "./app/*"
-      ],
-      "@pkgs/*": [
-        "./pkgs/*"
-      ],
-      "@assets/*": [
-        "./app/assets/*"
-      ],
-      "@pkgs-ext/*": [
-        "./pkgs-external/*"
-      ],
-      "types/*": [
-        "./pkgs/types/*"
-      ],
-      "tailwind.config": [
-        "./tailwind.config.js"
-      ]
+      "@app/*": ["./app/*"],
+      "@pkgs/*": ["./pkgs/*"],
+      "@assets/*": ["./app/assets/*"],
+      "types/*": ["./pkgs/types/*"],
+      "tailwind.config": ["./tailwind.config.js"]
     }
   },
   "include": [

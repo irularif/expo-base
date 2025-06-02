@@ -1,11 +1,11 @@
 import { AppColorScheme } from "@pkgs/constants/Theme";
 import { storeWithLocalStorage } from "@pkgs/utils/store";
 
-export interface IAppConfig {
+export interface IUseAppConfigState {
   colorScheme?: AppColorScheme;
 }
 
-const initialAppConfigState: IAppConfig = {
+const initialAppConfigState: IUseAppConfigState = {
   colorScheme: undefined, // Default to undefined to allow system preference
 };
 const useAppConfigState = storeWithLocalStorage(

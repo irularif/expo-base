@@ -1,12 +1,12 @@
 import React from "react";
 import colors from "tailwindcss/colors";
-import { Switch } from "@pkgs-ext/gluestack/ui/switch";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { HStack } from "@pkgs-ext/gluestack/ui/hstack";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/switch";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
+import { Switch } from "@pkgs/components/switch";
+import { Center } from "@pkgs/components/center";
+import { Text } from "@pkgs/components/text";
+import { HStack } from "@pkgs/components/hstack";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/switch";
+import { Box } from "@pkgs/components/box";
 
 const SwitchDemo = () => {
   return (

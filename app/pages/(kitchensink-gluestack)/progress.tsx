@@ -1,11 +1,11 @@
 import React from "react";
-import { Progress, ProgressFilledTrack } from "@pkgs-ext/gluestack/ui/progress";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { VStack } from "@pkgs-ext/gluestack/ui/vstack";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/progress";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
+import { Progress, ProgressFilledTrack } from "@pkgs/components/progress";
+import { Center } from "@pkgs/components/center";
+import { Text } from "@pkgs/components/text";
+import { VStack } from "@pkgs/components/vstack";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/progress";
+import { Box } from "@pkgs/components/box";
 
 const ProgressDemo = () => {
   return (

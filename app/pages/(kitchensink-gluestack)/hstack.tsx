@@ -1,10 +1,10 @@
 import React from "react";
-import { HStack } from "@pkgs-ext/gluestack/ui/hstack";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/hstack";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
+import { HStack } from "@pkgs/components/hstack";
+import { Box } from "@pkgs/components/box";
+import { Center } from "@pkgs/components/center";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/hstack";
+import { Text } from "@pkgs/components/text";
 
 const HStackDemo = () => {
   return (

@@ -1,17 +1,17 @@
 import React from "react";
-import { Fab, FabIcon } from "@pkgs-ext/gluestack/ui/fab";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { Icon, HelpCircleIcon, ExternalLinkIcon } from "@pkgs-ext/gluestack/ui/icon";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
+import { Fab, FabIcon } from "@pkgs/components/fab";
+import { Box } from "@pkgs/components/box";
+import { Icon, HelpCircleIcon, ExternalLinkIcon } from "@pkgs/components/icon";
+import { Center } from "@pkgs/components/center";
 import {
   Menu,
   MenuItem,
   MenuItemLabel,
   MenuSeparator,
-} from "@pkgs-ext/gluestack/ui/menu";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/fab";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
+} from "@pkgs/components/menu";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/fab";
+import { Text } from "@pkgs/components/text";
 
 const FabDemo = () => {
   return (

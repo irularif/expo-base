@@ -4,12 +4,12 @@ import {
   AvatarBadge,
   AvatarFallbackText,
   AvatarImage,
-} from "@pkgs-ext/gluestack/ui/avatar";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/avatar";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
+} from "@pkgs/components/avatar";
+import { Center } from "@pkgs/components/center";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { Box } from "@pkgs/components/box";
+import { examples } from "@app/docs/examples/avatar";
+import { Text } from "@pkgs/components/text";
 
 const AvatarDemo = () => {
   return (

@@ -1,12 +1,12 @@
 import React from "react";
-import { Image } from "@pkgs-ext/gluestack/ui/image";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Grid, GridItem } from "@pkgs-ext/gluestack/ui/grid";
-import { VStack } from "@pkgs-ext/gluestack/ui/vstack";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/image";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
+import { Image } from "@pkgs/components/image";
+import { Center } from "@pkgs/components/center";
+import { Text } from "@pkgs/components/text";
+import { Grid, GridItem } from "@pkgs/components/grid";
+import { VStack } from "@pkgs/components/vstack";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/image";
+import { Box } from "@pkgs/components/box";
 
 const images = [
   {

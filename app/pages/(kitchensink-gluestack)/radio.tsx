@@ -5,14 +5,14 @@ import {
   RadioIcon,
   RadioIndicator,
   RadioLabel,
-} from "@pkgs-ext/gluestack/ui/radio";
-import { CircleIcon } from "@pkgs-ext/gluestack/ui/icon";
-import { VStack } from "@pkgs-ext/gluestack/ui/vstack";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/radio";
+} from "@pkgs/components/radio";
+import { CircleIcon } from "@pkgs/components/icon";
+import { VStack } from "@pkgs/components/vstack";
+import { Center } from "@pkgs/components/center";
+import { Text } from "@pkgs/components/text";
+import { Box } from "@pkgs/components/box";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/radio";
 
 const RadioDemo = () => {
   const [values, setValues] = React.useState("");

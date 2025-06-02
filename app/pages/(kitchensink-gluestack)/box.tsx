@@ -1,9 +1,9 @@
 import React from "react";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/box";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
+import { Box } from "@pkgs/components/box";
+import { Center } from "@pkgs/components/center";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/box";
+import { Text } from "@pkgs/components/text";
 
 const BoxDemo = () => {
   return (

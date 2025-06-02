@@ -1,7 +1,7 @@
 import React from "react";
-import { Icon } from "@pkgs-ext/gluestack/ui/icon";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { Grid, GridItem } from "@pkgs-ext/gluestack/ui/grid";
+import { Icon } from "@pkgs/components/icon";
+import { Center } from "@pkgs/components/center";
+import { Grid, GridItem } from "@pkgs/components/grid";
 import {
   ArrowDownCircle,
   BookmarkPlus,
@@ -14,11 +14,11 @@ import {
   CalendarDaysIcon,
   RepeatIcon,
   CopyIcon,
-} from "@pkgs-ext/gluestack/ui/icon";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/icon";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
+} from "@pkgs/components/icon";
+import { Box } from "@pkgs/components/box";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/icon";
+import { Text } from "@pkgs/components/text";
 
 const icons = [
   {

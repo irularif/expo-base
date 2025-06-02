@@ -1,14 +1,14 @@
 import React from "react";
-import { Pressable } from "@pkgs-ext/gluestack/ui/pressable";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { Image } from "@pkgs-ext/gluestack/ui/image";
-import { BadgeText } from "@pkgs-ext/gluestack/ui/badge";
-import { VStack } from "@pkgs-ext/gluestack/ui/vstack";
-import { Badge } from "@pkgs-ext/gluestack/ui/badge";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/pressable";
+import { Pressable } from "@pkgs/components/pressable";
+import { Text } from "@pkgs/components/text";
+import { Center } from "@pkgs/components/center";
+import { Box } from "@pkgs/components/box";
+import { Image } from "@pkgs/components/image";
+import { BadgeText } from "@pkgs/components/badge";
+import { VStack } from "@pkgs/components/vstack";
+import { Badge } from "@pkgs/components/badge";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/pressable";
 
 const PressableDemo = () => {
   const [pressed, setPressed] = React.useState(false);

@@ -1,10 +1,10 @@
 import React from "react";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { Grid, GridItem } from "@pkgs-ext/gluestack/ui/grid";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/grid";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
+import { Center } from "@pkgs/components/center";
+import { Grid, GridItem } from "@pkgs/components/grid";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/grid";
+import { Text } from "@pkgs/components/text";
+import { Box } from "@pkgs/components/box";
 
 const GridDemo = () => {
   return (

@@ -1,10 +1,10 @@
 import React from "react";
-import { Textarea, TextareaInput } from "@pkgs-ext/gluestack/ui/textarea";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/textarea";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
+import { Textarea, TextareaInput } from "@pkgs/components/textarea";
+import { Center } from "@pkgs/components/center";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/textarea";
+import { Text } from "@pkgs/components/text";
+import { Box } from "@pkgs/components/box";
 
 const TextAreaDemo = () => {
   return (

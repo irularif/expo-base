@@ -8,14 +8,14 @@ import {
   AccordionIcon,
   AccordionContent,
   AccordionContentText,
-} from "@pkgs-ext/gluestack/ui/accordion";
-import { Divider } from "@pkgs-ext/gluestack/ui/divider";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
+} from "@pkgs/components/accordion";
+import { Divider } from "@pkgs/components/divider";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { Box } from "@pkgs/components/box";
 import { ChevronDownIcon, ChevronUpIcon } from "lucide-react-native";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/accordion";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
+import { examples } from "@app/docs/examples/accordion";
+import { Text } from "@pkgs/components/text";
+import { Center } from "@pkgs/components/center";
 
 const AccordionDemo = () => {
   const accRef = React.useRef(null);

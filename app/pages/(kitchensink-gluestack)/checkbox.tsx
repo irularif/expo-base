@@ -4,13 +4,13 @@ import {
   CheckboxIcon,
   CheckboxIndicator,
   CheckboxLabel,
-} from "@pkgs-ext/gluestack/ui/checkbox";
-import { CheckIcon } from "@pkgs-ext/gluestack/ui/icon";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/checkbox";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
+} from "@pkgs/components/checkbox";
+import { CheckIcon } from "@pkgs/components/icon";
+import { Center } from "@pkgs/components/center";
+import { Text } from "@pkgs/components/text";
+import { Box } from "@pkgs/components/box";
+import { examples } from "@app/docs/examples/checkbox";
+import { ScrollView } from "@pkgs/components/scroll-view";
 
 const initialTodoList = [
   { id: 1, label: "Feed Tommy", isDone: false },

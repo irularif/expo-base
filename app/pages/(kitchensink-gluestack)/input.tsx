@@ -1,12 +1,12 @@
 import React from "react";
-import { Input, InputField } from "@pkgs-ext/gluestack/ui/input";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Button, ButtonText } from "@pkgs-ext/gluestack/ui/button";
-import { VStack } from "@pkgs-ext/gluestack/ui/vstack";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/input";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
+import { Input, InputField } from "@pkgs/components/input";
+import { Center } from "@pkgs/components/center";
+import { Text } from "@pkgs/components/text";
+import { Button, ButtonText } from "@pkgs/components/button";
+import { VStack } from "@pkgs/components/vstack";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/input";
+import { Box } from "@pkgs/components/box";
 
 const InputDemo = () => {
   const [inputValue1, setInputValue1] = React.useState("");

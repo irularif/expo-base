@@ -1,6 +1,6 @@
 import React from "react";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
+import { Box } from "@pkgs/components/box";
+import { Center } from "@pkgs/components/center";
 import {
   Table,
   TableHeader,
@@ -8,13 +8,13 @@ import {
   TableHead,
   TableBody,
   TableData,
-} from "@pkgs-ext/gluestack/ui/table";
-import { Badge, BadgeText, BadgeIcon } from "@pkgs-ext/gluestack/ui/badge";
-import { CloseIcon, CheckIcon, InfoIcon } from "@pkgs-ext/gluestack/ui/icon";
+} from "@pkgs/components/table";
+import { Badge, BadgeText, BadgeIcon } from "@pkgs/components/badge";
+import { CloseIcon, CheckIcon, InfoIcon } from "@pkgs/components/icon";
 import { Platform } from "react-native";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/table";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/table";
+import { Text } from "@pkgs/components/text";
 
 const TableDemo = () => {
   const nativeProp = Platform.OS !== "web" ? { useRNView: true } : {};

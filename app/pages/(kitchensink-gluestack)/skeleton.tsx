@@ -1,12 +1,12 @@
 import React from "react";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { VStack } from "@pkgs-ext/gluestack/ui/vstack";
-import { HStack } from "@pkgs-ext/gluestack/ui/hstack";
-import { Skeleton, SkeletonText } from "@pkgs-ext/gluestack/ui/skeleton";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/skeleton";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
+import { Center } from "@pkgs/components/center";
+import { VStack } from "@pkgs/components/vstack";
+import { HStack } from "@pkgs/components/hstack";
+import { Skeleton, SkeletonText } from "@pkgs/components/skeleton";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/skeleton";
+import { Text } from "@pkgs/components/text";
+import { Box } from "@pkgs/components/box";
 
 const SkeletonDemo = () => {
   return (

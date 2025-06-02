@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { View } from "@pkgs-ext/gluestack/ui/view";
+import { Text } from "@pkgs/components/text";
+import { View } from "@pkgs/components/view";
 import { router } from "expo-router";
 
 export default function HomeScreen() {

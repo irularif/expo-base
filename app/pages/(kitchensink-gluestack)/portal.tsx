@@ -1,21 +1,21 @@
 import React from "react";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { VStack } from "@pkgs-ext/gluestack/ui/vstack";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Image } from "@pkgs-ext/gluestack/ui/image";
-import { Heading } from "@pkgs-ext/gluestack/ui/heading";
+import { Center } from "@pkgs/components/center";
+import { VStack } from "@pkgs/components/vstack";
+import { Text } from "@pkgs/components/text";
+import { Image } from "@pkgs/components/image";
+import { Heading } from "@pkgs/components/heading";
 import {
   Button,
   ButtonText,
   ButtonIcon,
   ButtonGroup,
-} from "@pkgs-ext/gluestack/ui/button";
-import { HStack } from "@pkgs-ext/gluestack/ui/hstack";
-import { Portal } from "@pkgs-ext/gluestack/ui/portal";
-import { CloseIcon } from "@pkgs-ext/gluestack/ui/icon";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/portal";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
+} from "@pkgs/components/button";
+import { HStack } from "@pkgs/components/hstack";
+import { Portal } from "@pkgs/components/portal";
+import { CloseIcon } from "@pkgs/components/icon";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/portal";
+import { Box } from "@pkgs/components/box";
 
 const PortalDemo = () => {
   const [visible, setVisible] = React.useState(false);

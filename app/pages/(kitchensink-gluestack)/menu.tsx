@@ -1,18 +1,18 @@
 import React from "react";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { Button, ButtonText } from "@pkgs-ext/gluestack/ui/button";
-import { Menu, MenuItem, MenuItemLabel } from "@pkgs-ext/gluestack/ui/menu";
+import { Center } from "@pkgs/components/center";
+import { Button, ButtonText } from "@pkgs/components/button";
+import { Menu, MenuItem, MenuItemLabel } from "@pkgs/components/menu";
 import {
   Icon,
   GlobeIcon,
   PlayIcon,
   SettingsIcon,
   AddIcon,
-} from "@pkgs-ext/gluestack/ui/icon";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/menu";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
+} from "@pkgs/components/icon";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/menu";
+import { Text } from "@pkgs/components/text";
+import { Box } from "@pkgs/components/box";
 
 const MenuDemo = () => {
   return (

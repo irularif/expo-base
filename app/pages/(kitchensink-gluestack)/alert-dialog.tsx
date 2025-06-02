@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Button, ButtonText } from "@pkgs-ext/gluestack/ui/button";
-import { Heading } from "@pkgs-ext/gluestack/ui/heading";
+import { Button, ButtonText } from "@pkgs/components/button";
+import { Heading } from "@pkgs/components/heading";
 import {
   AlertDialog,
   AlertDialogBackdrop,
@@ -8,12 +8,12 @@ import {
   AlertDialogHeader,
   AlertDialogBody,
   AlertDialogFooter,
-} from "@pkgs-ext/gluestack/ui/alert-dialog";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/alert-dialog";
+} from "@pkgs/components/alert-dialog";
+import { Text } from "@pkgs/components/text";
+import { Center } from "@pkgs/components/center";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { Box } from "@pkgs/components/box";
+import { examples } from "@app/docs/examples/alert-dialog";
 
 const AlertDialogDemo = () => {
   const [showAlertDialog, setShowAlertDialog] = useState(false);

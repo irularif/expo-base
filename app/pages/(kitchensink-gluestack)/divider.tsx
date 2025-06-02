@@ -1,17 +1,17 @@
 import React from "react";
-import { Divider } from "@pkgs-ext/gluestack/ui/divider";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
+import { Divider } from "@pkgs/components/divider";
+import { Center } from "@pkgs/components/center";
+import { Text } from "@pkgs/components/text";
 import {
   Avatar,
   AvatarFallbackText,
   AvatarImage,
-} from "@pkgs-ext/gluestack/ui/avatar";
-import { HStack } from "@pkgs-ext/gluestack/ui/hstack";
-import { VStack } from "@pkgs-ext/gluestack/ui/vstack";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/divider";
+} from "@pkgs/components/avatar";
+import { HStack } from "@pkgs/components/hstack";
+import { VStack } from "@pkgs/components/vstack";
+import { Box } from "@pkgs/components/box";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/divider";
 
 const DividerDemo = () => {
   return (

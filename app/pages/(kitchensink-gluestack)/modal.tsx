@@ -7,15 +7,15 @@ import {
   ModalCloseButton,
   ModalBody,
   ModalFooter,
-} from "@pkgs-ext/gluestack/ui/modal";
-import { Heading } from "@pkgs-ext/gluestack/ui/heading";
-import { Button, ButtonText } from "@pkgs-ext/gluestack/ui/button";
-import { Icon, CloseIcon } from "@pkgs-ext/gluestack/ui/icon";
-import { Text } from "@pkgs-ext/gluestack/ui/text";
-import { Center } from "@pkgs-ext/gluestack/ui/center";
-import { ScrollView } from "@pkgs-ext/gluestack/ui/scroll-view";
-import { examples } from "@pkgs-ext/gluestack/docs/examples/modal";
-import { Box } from "@pkgs-ext/gluestack/ui/box";
+} from "@pkgs/components/modal";
+import { Heading } from "@pkgs/components/heading";
+import { Button, ButtonText } from "@pkgs/components/button";
+import { Icon, CloseIcon } from "@pkgs/components/icon";
+import { Text } from "@pkgs/components/text";
+import { Center } from "@pkgs/components/center";
+import { ScrollView } from "@pkgs/components/scroll-view";
+import { examples } from "@app/docs/examples/modal";
+import { Box } from "@pkgs/components/box";
 
 const ModalDemo = () => {
   const [showModal, setShowModal] = React.useState(false);
