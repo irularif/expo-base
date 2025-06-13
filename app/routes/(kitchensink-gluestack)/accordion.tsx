@@ -1,27 +1,29 @@
-import React from "react";
 import {
   Accordion,
-  AccordionItem,
-  AccordionHeader,
-  AccordionTrigger,
-  AccordionTitleText,
-  AccordionIcon,
   AccordionContent,
   AccordionContentText,
-} from "@pkgs/components/accordion";
-import { Divider } from "@pkgs/components/divider";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { Box } from "@pkgs/components/box";
-import { ChevronDownIcon, ChevronUpIcon } from "lucide-react-native";
-import { examples } from "@app/docs/examples/accordion";
-import { Text } from "@pkgs/components/text";
-import { Center } from "@pkgs/components/center";
+  AccordionHeader,
+  AccordionIcon,
+  AccordionItem,
+  AccordionTitleText,
+  AccordionTrigger,
+  Box,
+  Center,
+  Divider,
+  ScrollView,
+  Text,
+} from '@pkgs/ui';
+import { ChevronDownIcon, ChevronUpIcon } from 'lucide-react-native';
+import React from 'react';
+import { examples } from '@app/docs/examples/accordion';
 
 const AccordionDemo = () => {
   const accRef = React.useRef(null);
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-50 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -86,7 +88,7 @@ const AccordionDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

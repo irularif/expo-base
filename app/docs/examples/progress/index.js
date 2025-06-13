@@ -1,10 +1,4 @@
-import {
-  VStack,
-  Text,
-  Progress,
-  ProgressFilledTrack,
-  Heading,
-} from '@pkgs/ui';
+import { VStack, Text, Progress, ProgressFilledTrack, Heading } from '@pkgs/ui';
 export const examples = [
   {
     name: 'Value',

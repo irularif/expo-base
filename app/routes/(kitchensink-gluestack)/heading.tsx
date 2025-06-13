@@ -1,18 +1,23 @@
-import React from "react";
-import { Heading } from "@pkgs/components/heading";
-import { Center } from "@pkgs/components/center";
-import { HStack } from "@pkgs/components/hstack";
-import { Icon, CircleIcon } from "@pkgs/components/icon";
-import { VStack } from "@pkgs/components/vstack";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { examples } from "@app/docs/examples/heading";
-import { Text } from "@pkgs/components/text";
-import { Box } from "@pkgs/components/box";
+import {
+  Box,
+  Center,
+  CircleIcon,
+  Heading,
+  HStack,
+  Icon,
+  ScrollView,
+  Text,
+  VStack,
+} from '@pkgs/ui';
+import React from 'react';
+import { examples } from '@app/docs/examples/heading';
 
 const HeadingDemo = () => {
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-50 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -63,7 +68,7 @@ const HeadingDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

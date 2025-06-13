@@ -1,23 +1,28 @@
-import React from "react";
-import { Center } from "@pkgs/components/center";
-import { Button, ButtonText } from "@pkgs/components/button";
-import { Menu, MenuItem, MenuItemLabel } from "@pkgs/components/menu";
 import {
-  Icon,
-  GlobeIcon,
-  PlayIcon,
-  SettingsIcon,
   AddIcon,
-} from "@pkgs/components/icon";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { examples } from "@app/docs/examples/menu";
-import { Text } from "@pkgs/components/text";
-import { Box } from "@pkgs/components/box";
+  Box,
+  Button,
+  ButtonText,
+  Center,
+  GlobeIcon,
+  Icon,
+  Menu,
+  MenuItem,
+  MenuItemLabel,
+  PlayIcon,
+  ScrollView,
+  SettingsIcon,
+  Text,
+} from '@pkgs/ui';
+import React from 'react';
+import { examples } from '@app/docs/examples/menu';
 
 const MenuDemo = () => {
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-50 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -28,7 +33,7 @@ const MenuDemo = () => {
           <Menu
             placement="top"
             offset={5}
-            disabledKeys={["Settings"]}
+            disabledKeys={['Settings']}
             trigger={({ ...triggerProps }) => {
               return (
                 <Button {...triggerProps}>
@@ -59,7 +64,7 @@ const MenuDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

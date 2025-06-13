@@ -1,11 +1,11 @@
-import { Text, View } from "@pkgs/ui";
-import { router } from "expo-router";
-import React, { useEffect } from "react";
+import { Text, View } from '@pkgs/ui';
+import { router } from 'expo-router';
+import React, { useEffect } from 'react';
 
 export default function HomeScreen() {
   useEffect(() => {
     setTimeout(() => {
-      router.push("/");
+      router.push('/');
     }, 3000);
   }, []);
 

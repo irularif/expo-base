@@ -1,17 +1,13 @@
-import React from "react";
-import { Center } from "@pkgs/components/center";
-import { Card } from "@pkgs/components/card";
-import { Text } from "@pkgs/components/text";
-import { Image } from "@pkgs/components/image";
-import { Heading } from "@pkgs/components/heading";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { Box } from "@pkgs/components/box";
-import { examples } from "@app/docs/examples/card";
+import { Box, Card, Center, Heading, Image, ScrollView, Text } from '@pkgs/ui';
+import React from 'react';
+import { examples } from '@app/docs/examples/card';
 
 const CardDemo = () => {
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-50 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -22,7 +18,7 @@ const CardDemo = () => {
           <Card className="max-w-[352px] flex flex-col p-4 border border-outline-200 rounded-lg shadow-soft-1">
             <Image
               source={{
-                uri: "https://i.imgur.com/yL7VSbU.png",
+                uri: 'https://i.imgur.com/yL7VSbU.png',
               }}
               alt="random"
               className="w-full aspect-[352/234] rounded"
@@ -45,7 +41,7 @@ const CardDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

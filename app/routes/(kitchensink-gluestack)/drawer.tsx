@@ -1,26 +1,29 @@
-import React from "react";
-import { Center } from "@pkgs/components/center";
-import { Button, ButtonText } from "@pkgs/components/button";
 import {
+  Box,
+  Button,
+  ButtonText,
+  Center,
   Drawer,
   DrawerBackdrop,
-  DrawerContent,
-  DrawerHeader,
   DrawerBody,
+  DrawerContent,
   DrawerFooter,
-} from "@pkgs/components/drawer";
-import { Heading } from "@pkgs/components/heading";
-import { Text } from "@pkgs/components/text";
-import { Platform } from "react-native";
-import { Box } from "@pkgs/components/box";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { examples } from "@app/docs/examples/drawer";
+  DrawerHeader,
+  Heading,
+  ScrollView,
+  Text,
+} from '@pkgs/ui';
+import React from 'react';
+import { Platform } from 'react-native';
+import { examples } from '@app/docs/examples/drawer';
 
 const DrawerDemo = () => {
   const [showDrawer, setShowDrawer] = React.useState(false);
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-50 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -40,7 +43,7 @@ const DrawerDemo = () => {
             onClose={() => {
               setShowDrawer(false);
             }}
-            size={Platform.OS === "web" ? "sm" : "lg"}
+            size={Platform.OS === 'web' ? 'sm' : 'lg'}
           >
             <DrawerBackdrop />
             <DrawerContent className="p-4 sm:p-6 native:pt-[56px]">
@@ -69,7 +72,7 @@ const DrawerDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

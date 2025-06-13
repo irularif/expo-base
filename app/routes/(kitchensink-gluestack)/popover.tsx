@@ -1,19 +1,20 @@
-import React from "react";
-import { Center } from "@pkgs/components/center";
-import { Button, ButtonText } from "@pkgs/components/button";
-import { VStack } from "@pkgs/components/vstack";
-import { Text } from "@pkgs/components/text";
-import { Image } from "@pkgs/components/image";
 import {
+  Box,
+  Button,
+  ButtonText,
+  Center,
+  Image,
   Popover,
-  PopoverBackdrop,
-  PopoverContent,
   PopoverArrow,
+  PopoverBackdrop,
   PopoverBody,
-} from "@pkgs/components/popover";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { examples } from "@app/docs/examples/popover";
-import { Box } from "@pkgs/components/box";
+  PopoverContent,
+  ScrollView,
+  Text,
+  VStack,
+} from '@pkgs/ui';
+import React from 'react';
+import { examples } from '@app/docs/examples/popover';
 
 const PopoverDemo = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -26,7 +27,9 @@ const PopoverDemo = () => {
 
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-100 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -40,7 +43,7 @@ const PopoverDemo = () => {
           >
             <Image
               source={{
-                uri: "https://images.unsplash.com/photo-1647221598272-9aa015392c81?q=80&w=3840&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                uri: 'https://images.unsplash.com/photo-1647221598272-9aa015392c81?q=80&w=3840&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
               }}
               alt="image"
               className="w-full aspect-[336/173] rounded-md"
@@ -52,7 +55,7 @@ const PopoverDemo = () => {
               onOpen={handleOpen}
               placement="bottom"
               offset={8}
-              trigger={(triggerProps) => {
+              trigger={(triggerProps: any) => {
                 return (
                   <Button {...triggerProps}>
                     <ButtonText>Open Popover</ButtonText>
@@ -77,7 +80,7 @@ const PopoverDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

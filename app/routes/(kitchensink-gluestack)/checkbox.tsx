@@ -1,21 +1,21 @@
-import React, { useState } from "react";
 import {
+  Box,
+  Center,
   Checkbox,
   CheckboxIcon,
   CheckboxIndicator,
   CheckboxLabel,
-} from "@pkgs/components/checkbox";
-import { CheckIcon } from "@pkgs/components/icon";
-import { Center } from "@pkgs/components/center";
-import { Text } from "@pkgs/components/text";
-import { Box } from "@pkgs/components/box";
-import { examples } from "@app/docs/examples/checkbox";
-import { ScrollView } from "@pkgs/components/scroll-view";
+  CheckIcon,
+  ScrollView,
+  Text,
+} from '@pkgs/ui';
+import React, { useState } from 'react';
+import { examples } from '@app/docs/examples/checkbox';
 
 const initialTodoList = [
-  { id: 1, label: "Feed Tommy", isDone: false },
-  { id: 2, label: "Buy milk and eggs", isDone: false },
-  { id: 3, label: "Yoga with matty", isDone: false },
+  { id: 1, label: 'Feed Tommy', isDone: false },
+  { id: 2, label: 'Buy milk and eggs', isDone: false },
+  { id: 3, label: 'Yoga with matty', isDone: false },
 ];
 
 const CheckboxDemo = () => {
@@ -30,7 +30,9 @@ const CheckboxDemo = () => {
   };
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-50 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -54,7 +56,7 @@ const CheckboxDemo = () => {
                   <CheckboxIcon as={CheckIcon} />
                 </CheckboxIndicator>
                 <CheckboxLabel
-                  className={`${todo.isDone ? "line-through" : ""}`}
+                  className={`${todo.isDone ? 'line-through' : ''}`}
                 >
                   {todo.label}
                 </CheckboxLabel>
@@ -66,7 +68,7 @@ const CheckboxDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

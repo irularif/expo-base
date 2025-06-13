@@ -1,22 +1,24 @@
-import React from "react";
-import { Divider } from "@pkgs/components/divider";
-import { Center } from "@pkgs/components/center";
-import { Text } from "@pkgs/components/text";
 import {
   Avatar,
   AvatarFallbackText,
   AvatarImage,
-} from "@pkgs/components/avatar";
-import { HStack } from "@pkgs/components/hstack";
-import { VStack } from "@pkgs/components/vstack";
-import { Box } from "@pkgs/components/box";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { examples } from "@app/docs/examples/divider";
+  Box,
+  Center,
+  Divider,
+  HStack,
+  ScrollView,
+  Text,
+  VStack,
+} from '@pkgs/ui';
+import React from 'react';
+import { examples } from '@app/docs/examples/divider';
 
 const DividerDemo = () => {
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-50 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -39,7 +41,7 @@ const DividerDemo = () => {
                   <AvatarFallbackText>John Doe</AvatarFallbackText>
                   <AvatarImage
                     source={{
-                      uri: "https://images.unsplash.com/photo-1611178206064-2ae27f72b9ca?q=80&w=3764&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                      uri: 'https://images.unsplash.com/photo-1611178206064-2ae27f72b9ca?q=80&w=3764&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                     }}
                   />
                 </Avatar>
@@ -51,7 +53,7 @@ const DividerDemo = () => {
                   <AvatarFallbackText>John Doe</AvatarFallbackText>
                   <AvatarImage
                     source={{
-                      uri: "https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=3871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                      uri: 'https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=3871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                     }}
                   />
                 </Avatar>
@@ -63,7 +65,7 @@ const DividerDemo = () => {
                   <AvatarFallbackText>John Doe</AvatarFallbackText>
                   <AvatarImage
                     source={{
-                      uri: "https://images.unsplash.com/photo-1548372290-8d01b6c8e78c?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                      uri: 'https://images.unsplash.com/photo-1548372290-8d01b6c8e78c?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                     }}
                   />
                 </Avatar>
@@ -76,7 +78,7 @@ const DividerDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

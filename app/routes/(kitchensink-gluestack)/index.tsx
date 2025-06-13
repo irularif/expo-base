@@ -1,28 +1,31 @@
-import { componentsList } from "@app/docs/utils/list";
-import { Box } from "@pkgs/components/box";
-import { Heading } from "@pkgs/components/heading";
-import { HStack } from "@pkgs/components/hstack";
-import { ChevronRightIcon, Icon } from "@pkgs/components/icon";
-import { Pressable } from "@pkgs/components/pressable";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { Text } from "@pkgs/components/text";
-import { VStack } from "@pkgs/components/vstack";
-import { Image as ExpoImage } from "expo-image";
-import { useRouter } from "expo-router";
-import { cssInterop, useColorScheme } from "nativewind";
-import React from "react";
-import { View } from "react-native";
+import {
+  Box,
+  ChevronRightIcon,
+  Heading,
+  HStack,
+  Icon,
+  Pressable,
+  ScrollView,
+  Text,
+  VStack,
+} from '@pkgs/ui';
+import { Image as ExpoImage } from 'expo-image';
+import { useRouter } from 'expo-router';
+import { cssInterop, useColorScheme } from 'nativewind';
+import React from 'react';
+import { View } from 'react-native';
+import { componentsList } from '../../docs/utils/list';
 
-cssInterop(ExpoImage, { className: "style" });
+cssInterop(ExpoImage, { className: 'style' });
 
 const ComponentCard = ({ component, onPress }: any) => {
   const { colorScheme: colorMode } = useColorScheme();
   return (
     <Pressable
-      className={`transition-colors duration-500 flex-1 rounded-xl bg-background-0 w-full h-full sm:gap-2 gap-1 flex flex-col lg:p-4 ${
-        colorMode === "light"
-          ? "lg:shadow-[0px_0px_4.374px_0px_rgba(38,38,38,0.10)] data-[hover=true]:lg:border data-[hover=true]:border-outline-100"
-          : "lg:shadow-soft-1 lg:border border-outline-50 data-[hover=true]:border-outline-200"
+      className={`transition-colors duration-300 flex-1 rounded-xl bg-background-0 w-full h-full sm:gap-2 gap-1 flex flex-col lg:p-4 ${
+        colorMode === 'light'
+          ? 'lg:shadow-[0px_0px_4.374px_0px_rgba(38,38,38,0.10)] data-[hover=true]:lg:border data-[hover=true]:border-outline-100'
+          : 'lg:shadow-soft-1 lg:border border-outline-50 data-[hover=true]:border-outline-200'
       }`}
       onPress={onPress}
     >
@@ -30,7 +33,7 @@ const ComponentCard = ({ component, onPress }: any) => {
         <Box className="rounded-lg px-3 lg:px-6 py-[14px] lg:py-7 aspect-[17/12]">
           <ExpoImage
             source={{
-              uri: colorMode === "light" ? component.url : component.darkUrl,
+              uri: colorMode === 'light' ? component.url : component.darkUrl,
             }}
             alt={component.title}
             className={`flex-1 rounded lg:rounded-md shadow-[0px_0px_1.998px_0px_rgba(38,38,38,0.10)]`}
@@ -64,9 +67,9 @@ const Header = () => {
           <ExpoImage
             source={{
               uri:
-                colorMode === "light"
-                  ? "https://i.imgur.com/9bvua6C.png"
-                  : "https://i.imgur.com/EUqtUMu.png",
+                colorMode === 'light'
+                  ? 'https://i.imgur.com/9bvua6C.png'
+                  : 'https://i.imgur.com/EUqtUMu.png',
             }}
             alt="logo_image"
             className="h-5 w-5 rounded-sm lg:h-6 lg:w-6 xl:h-7 xl:w-7"
@@ -87,9 +90,9 @@ const Header = () => {
         <ExpoImage
           source={{
             uri:
-              colorMode === "light"
-                ? "https://i.imgur.com/sxY9qxx.png"
-                : "https://i.imgur.com/icZHMep.png",
+              colorMode === 'light'
+                ? 'https://i.imgur.com/sxY9qxx.png'
+                : 'https://i.imgur.com/icZHMep.png',
           }}
           alt="header_image"
           className="flex-1"

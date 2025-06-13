@@ -1,29 +1,31 @@
-import React from "react";
-import { Center } from "@pkgs/components/center";
-import { VStack } from "@pkgs/components/vstack";
-import { Text } from "@pkgs/components/text";
-import { Image } from "@pkgs/components/image";
-import { Heading } from "@pkgs/components/heading";
 import {
+  Box,
   Button,
-  ButtonText,
-  ButtonIcon,
   ButtonGroup,
-} from "@pkgs/components/button";
-import { HStack } from "@pkgs/components/hstack";
-import { Portal } from "@pkgs/components/portal";
-import { CloseIcon } from "@pkgs/components/icon";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { examples } from "@app/docs/examples/portal";
-import { Box } from "@pkgs/components/box";
+  ButtonIcon,
+  ButtonText,
+  Center,
+  CloseIcon,
+  Heading,
+  HStack,
+  Image,
+  Portal,
+  ScrollView,
+  Text,
+  VStack,
+} from '@pkgs/ui';
+import React from 'react';
+import { examples } from '@app/docs/examples/portal';
 
 const PortalDemo = () => {
   const [visible, setVisible] = React.useState(false);
-  const [slot, setSlot] = React.useState("12");
+  const [slot, setSlot] = React.useState('12');
 
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-50 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -35,7 +37,7 @@ const PortalDemo = () => {
             <VStack className="border border-outline-200 rounded-xl p-3 bg-background-0">
               <Image
                 source={{
-                  uri: "https://gluestack.github.io/public-blog-video-assets/ship.png",
+                  uri: 'https://gluestack.github.io/public-blog-video-assets/ship.png',
                 }}
                 alt="image"
                 className="w-full aspect-[312/173] rounded"
@@ -52,7 +54,9 @@ const PortalDemo = () => {
           <Portal
             isOpen={visible}
             //@ts-ignore
-            className={`justify-center items-center ${visible ? "bg-background-dark/60" : ""}`}
+            className={`justify-center items-center ${
+              visible ? 'bg-background-dark/60' : ''
+            }`}
           >
             <VStack className="max-w-[324px] w-full p-4 bg-background-0 shadow-hard-5 rounded-lg border border-outline-300 justify-between">
               <HStack className="justify-between items-center">
@@ -70,7 +74,7 @@ const PortalDemo = () => {
 
               <Text className="mt-2 mb-4" size="sm">
                 <Text className="font-semibold" size="sm">
-                  The Sinbad Movie:{" "}
+                  The Sinbad Movie:{' '}
                 </Text>
                 Legend of the Seven Seas (also known as simply Sinbad) is a 2003
                 American animated adventure film produced by DreamWorks
@@ -79,10 +83,10 @@ const PortalDemo = () => {
 
               <ButtonGroup space="md" className="flex flex-row">
                 <Button
-                  variant={slot === "11" ? "solid" : "outline"}
+                  variant={slot === '11' ? 'solid' : 'outline'}
                   onPress={() => {
-                    if (slot !== "11") {
-                      setSlot("11");
+                    if (slot !== '11') {
+                      setSlot('11');
                     }
                   }}
                   size="xs"
@@ -90,10 +94,10 @@ const PortalDemo = () => {
                   <ButtonText>11:30 AM</ButtonText>
                 </Button>
                 <Button
-                  variant={slot === "12" ? "solid" : "outline"}
+                  variant={slot === '12' ? 'solid' : 'outline'}
                   onPress={() => {
-                    if (slot !== "12") {
-                      setSlot("12");
+                    if (slot !== '12') {
+                      setSlot('12');
                     }
                   }}
                   size="xs"
@@ -108,7 +112,7 @@ const PortalDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

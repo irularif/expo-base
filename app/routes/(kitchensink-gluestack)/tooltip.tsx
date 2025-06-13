@@ -1,29 +1,32 @@
-import React from "react";
-import { Tooltip, TooltipContent, TooltipText } from "@pkgs/components/tooltip";
-import { Button, ButtonIcon } from "@pkgs/components/button";
-import { Text } from "@pkgs/components/text";
-import { Center } from "@pkgs/components/center";
 import {
+  Box,
+  Button,
+  ButtonIcon,
+  Center,
+  ChevronDownIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
   ChevronUpIcon,
-  ChevronDownIcon,
-} from "@pkgs/components/icon";
-import { VStack } from "@pkgs/components/vstack";
-import { Box } from "@pkgs/components/box";
-import { Platform } from "react-native";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { examples } from "@app/docs/examples/tooltip";
+  ScrollView,
+  Text,
+  Tooltip,
+  TooltipContent,
+  TooltipText,
+  VStack,
+} from '@pkgs/ui';
+import React from 'react';
+import { Platform } from 'react-native';
+import { examples } from '@app/docs/examples/tooltip';
 
 const DirectionalTooltip = ({ placement, IconComponent }: any) => {
   const [pressed, setPressed] = React.useState(false);
-  const tooltipProps = Platform.OS !== "web" ? { isOpen: pressed } : {};
+  const tooltipProps = Platform.OS !== 'web' ? { isOpen: pressed } : {};
   return (
     <Tooltip
       placement={placement}
       // isOpen={pressed}
       {...tooltipProps}
-      trigger={(triggerProps) => (
+      trigger={(triggerProps: any) => (
         <Button
           variant="link"
           {...triggerProps}
@@ -45,7 +48,9 @@ const DirectionalTooltip = ({ placement, IconComponent }: any) => {
 const TooltipDemo = () => {
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-50 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -87,7 +92,7 @@ const TooltipDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

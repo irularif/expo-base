@@ -1,52 +1,57 @@
-import React from "react";
-import { Image } from "@pkgs/components/image";
-import { Center } from "@pkgs/components/center";
-import { Text } from "@pkgs/components/text";
-import { Grid, GridItem } from "@pkgs/components/grid";
-import { VStack } from "@pkgs/components/vstack";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { examples } from "@app/docs/examples/image";
-import { Box } from "@pkgs/components/box";
+import {
+  Box,
+  Center,
+  Grid,
+  GridItem,
+  Image,
+  ScrollView,
+  Text,
+  VStack,
+} from '@pkgs/ui';
+import React from 'react';
+import { examples } from '@app/docs/examples/image';
 
 const images = [
   {
     id: 1,
-    url: "https://i.imgur.com/vFNOeCn.png",
+    url: 'https://i.imgur.com/vFNOeCn.png',
   },
   {
     id: 2,
-    url: "https://i.imgur.com/8ng85b5.png",
+    url: 'https://i.imgur.com/8ng85b5.png',
   },
   {
     id: 3,
-    url: "https://i.imgur.com/cyRKjHI.png",
+    url: 'https://i.imgur.com/cyRKjHI.png',
   },
   {
     id: 4,
-    url: "https://i.imgur.com/nzclOpJ.png",
+    url: 'https://i.imgur.com/nzclOpJ.png',
   },
   {
     id: 5,
-    url: "https://i.imgur.com/3IOgIev.png",
+    url: 'https://i.imgur.com/3IOgIev.png',
   },
   {
     id: 6,
-    url: "https://i.imgur.com/FpTI9UX.png",
+    url: 'https://i.imgur.com/FpTI9UX.png',
   },
   {
     id: 7,
-    url: "https://i.imgur.com/QZu77gP.png",
+    url: 'https://i.imgur.com/QZu77gP.png',
   },
   {
     id: 8,
-    url: "https://i.imgur.com/FO1F4tR.png",
+    url: 'https://i.imgur.com/FO1F4tR.png',
   },
 ];
 
 const ImageDemo = () => {
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-50 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -61,7 +66,7 @@ const ImageDemo = () => {
             <Grid
               className="gap-2"
               _extra={{
-                className: "grid-cols-3",
+                className: 'grid-cols-3',
               }}
             >
               {images.map((image) => {
@@ -70,7 +75,7 @@ const ImageDemo = () => {
                     key={image.id}
                     className="max-w-[96px] max-h-[96px] h-full w-full"
                     _extra={{
-                      className: "col-span-1",
+                      className: 'col-span-1',
                     }}
                   >
                     <Image
@@ -89,7 +94,7 @@ const ImageDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

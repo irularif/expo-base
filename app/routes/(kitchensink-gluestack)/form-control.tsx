@@ -1,29 +1,33 @@
-import React from "react";
 import {
+  AlertCircleIcon,
+  Box,
+  Button,
+  ButtonText,
+  Center,
   FormControl,
+  FormControlError,
+  FormControlErrorIcon,
+  FormControlErrorText,
   FormControlHelper,
+  FormControlHelperText,
   FormControlLabel,
   FormControlLabelText,
-  FormControlHelperText,
-  FormControlError,
-  FormControlErrorText,
-  FormControlErrorIcon,
-} from "@pkgs/components/form-control";
-import { Input, InputField, InputSlot, InputIcon } from "@pkgs/components/input";
-import { AlertCircleIcon } from "@pkgs/components/icon";
-import { Button, ButtonText } from "@pkgs/components/button";
-import { Center } from "@pkgs/components/center";
-import { EyeIcon, EyeOffIcon } from "lucide-react-native";
-import { Box } from "@pkgs/components/box";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { examples } from "@app/docs/examples/form-control";
-import { Text } from "@pkgs/components/text";
+  Input,
+  InputField,
+  InputIcon,
+  InputSlot,
+  ScrollView,
+  Text,
+} from '@pkgs/ui';
+import { EyeIcon, EyeOffIcon } from 'lucide-react-native';
+import React from 'react';
+import { examples } from '@app/docs/examples/form-control';
 
 const FormControlDemo = () => {
   const [isInvalid, setIsInvalid] = React.useState(false);
   const [isInvalid2, setIsInvalid2] = React.useState(false);
-  const [inputValue1, setInputValue1] = React.useState("");
-  const [inputValue2, setInputValue2] = React.useState("");
+  const [inputValue1, setInputValue1] = React.useState('');
+  const [inputValue2, setInputValue2] = React.useState('');
   const [showPassword1, setShowPassword1] = React.useState(false);
   const [showPassword2, setShowPassword2] = React.useState(false);
 
@@ -41,7 +45,9 @@ const FormControlDemo = () => {
   };
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-50 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -58,9 +64,9 @@ const FormControlDemo = () => {
               </FormControlLabel>
               <Input>
                 <InputField
-                  type={showPassword1 ? "text" : "password"}
+                  type={showPassword1 ? 'text' : 'password'}
                   value={inputValue1}
-                  onChangeText={(text) => setInputValue1(text)}
+                  onChangeText={(text: string) => setInputValue1(text)}
                 />
                 <InputSlot
                   onPress={() => setShowPassword1(!showPassword1)}
@@ -92,9 +98,9 @@ const FormControlDemo = () => {
               </FormControlLabel>
               <Input>
                 <InputField
-                  type={showPassword2 ? "text" : "password"}
+                  type={showPassword2 ? 'text' : 'password'}
                   value={inputValue2}
-                  onChangeText={(text) => setInputValue2(text)}
+                  onChangeText={(text: string) => setInputValue2(text)}
                 />
                 <InputSlot
                   onPress={() => setShowPassword2(!showPassword2)}
@@ -131,7 +137,7 @@ const FormControlDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

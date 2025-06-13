@@ -1,23 +1,25 @@
-import React from "react";
 import {
+  Box,
+  Center,
+  Icon,
+  ScrollView,
   Slider,
   SliderFilledTrack,
   SliderThumb,
   SliderTrack,
-} from "@pkgs/components/slider";
-import { Center } from "@pkgs/components/center";
-import { Box } from "@pkgs/components/box";
-import { Text } from "@pkgs/components/text";
-import { Icon } from "@pkgs/components/icon";
-import HundredEmoji from "@app/docs/custom/icons/hundredEmoji";
-import ThumbDownEmoji from "@app/docs/custom/icons/thumbDownEmoji";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { examples } from "@app/docs/examples/slider";
+  Text,
+} from '@pkgs/ui';
+import React from 'react';
+import HundredEmoji from '../../docs/custom/icons/hundredEmoji';
+import ThumbDownEmoji from '../../docs/custom/icons/thumbDownEmoji';
+import { examples } from '@app/docs/examples/slider';
 
 const SliderDemo = () => {
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-50 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -45,7 +47,7 @@ const SliderDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

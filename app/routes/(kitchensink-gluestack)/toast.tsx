@@ -1,22 +1,24 @@
-import React from "react";
 import {
+  Box,
+  Button,
+  ButtonText,
+  Center,
+  CheckIcon,
+  Icon,
+  ScrollView,
+  Text,
   Toast,
   ToastDescription,
   ToastTitle,
   useToast,
-} from "@pkgs/components/toast";
-import { Center } from "@pkgs/components/center";
-import { VStack } from "@pkgs/components/vstack";
-import { CheckIcon, Icon } from "@pkgs/components/icon";
-import { Button, ButtonText } from "@pkgs/components/button";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { examples } from "@app/docs/examples/toast";
-import { Text } from "@pkgs/components/text";
-import { Box } from "@pkgs/components/box";
+  VStack,
+} from '@pkgs/ui';
+import React from 'react';
+import { examples } from '@app/docs/examples/toast';
 
 const ToastDemo = () => {
   const toast = useToast();
-  const [toastId, setToastId] = React.useState("0");
+  const [toastId, setToastId] = React.useState('0');
   const handleToast = () => {
     if (!toast.isActive(toastId)) {
       showNewToast();
@@ -28,10 +30,10 @@ const ToastDemo = () => {
     setToastId(newId);
     toast.show({
       id: newId,
-      placement: "top",
+      placement: 'top',
       duration: 3000,
-      render: ({ id }) => {
-        const uniqueToastId = "toast-" + id;
+      render: ({ id }: { id: string }) => {
+        const uniqueToastId = 'toast-' + id;
         return (
           <Toast
             nativeID={uniqueToastId}
@@ -51,7 +53,9 @@ const ToastDemo = () => {
   };
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-50 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -67,7 +71,7 @@ const ToastDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

@@ -1,16 +1,22 @@
-import React from "react";
-import { Badge, BadgeText, BadgeIcon } from "@pkgs/components/badge";
-import { GlobeIcon } from "@pkgs/components/icon";
-import { Center } from "@pkgs/components/center";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { Box } from "@pkgs/components/box";
-import { examples } from "@app/docs/examples/badge";
-import { Text } from "@pkgs/components/text";
+import {
+  Badge,
+  BadgeIcon,
+  BadgeText,
+  Box,
+  Center,
+  GlobeIcon,
+  ScrollView,
+  Text,
+} from '@pkgs/ui';
+import React from 'react';
+import { examples } from '@app/docs/examples/badge';
 
 const BadgeDemo = () => {
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-100 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -27,7 +33,7 @@ const BadgeDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

@@ -1,18 +1,23 @@
-import React from "react";
-import { Link, LinkText } from "@pkgs/components/link";
-import { Center } from "@pkgs/components/center";
-import { HStack } from "@pkgs/components/hstack";
-import { Icon } from "@pkgs/components/icon";
-import { Twitter, Youtube } from "lucide-react-native";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { examples } from "@app/docs/examples/link";
-import { Text } from "@pkgs/components/text";
-import { Box } from "@pkgs/components/box";
+import {
+  Box,
+  Center,
+  HStack,
+  Icon,
+  Link,
+  LinkText,
+  ScrollView,
+  Text,
+} from '@pkgs/ui';
+import { Twitter, Youtube } from 'lucide-react-native';
+import React from 'react';
+import { examples } from '@app/docs/examples/link';
 
 const LinkDemo = () => {
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-50 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -47,7 +52,7 @@ const LinkDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

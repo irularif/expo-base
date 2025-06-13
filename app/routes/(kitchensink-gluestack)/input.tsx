@@ -1,25 +1,31 @@
-import React from "react";
-import { Input, InputField } from "@pkgs/components/input";
-import { Center } from "@pkgs/components/center";
-import { Text } from "@pkgs/components/text";
-import { Button, ButtonText } from "@pkgs/components/button";
-import { VStack } from "@pkgs/components/vstack";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { examples } from "@app/docs/examples/input";
-import { Box } from "@pkgs/components/box";
+import {
+  Box,
+  Button,
+  ButtonText,
+  Center,
+  Input,
+  InputField,
+  ScrollView,
+  Text,
+  VStack,
+} from '@pkgs/ui';
+import React from 'react';
+import { examples } from '@app/docs/examples/input';
 
 const InputDemo = () => {
-  const [inputValue1, setInputValue1] = React.useState("");
-  const [inputValue2, setInputValue2] = React.useState("");
+  const [inputValue1, setInputValue1] = React.useState('');
+  const [inputValue2, setInputValue2] = React.useState('');
 
   const handleSubmit = () => {
-    setInputValue1("");
-    setInputValue2("");
+    setInputValue1('');
+    setInputValue2('');
   };
 
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-50 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -33,10 +39,10 @@ const InputDemo = () => {
             </Text>
             <Input size="sm" className="mb-6">
               <InputField
-                type={"text"}
+                type={'text'}
                 value={inputValue1}
                 placeholder="Enter First Name"
-                onChangeText={(text) => setInputValue1(text)}
+                onChangeText={(text: string) => setInputValue1(text)}
               />
             </Input>
 
@@ -45,10 +51,10 @@ const InputDemo = () => {
             </Text>
             <Input size="sm" className="mb-8">
               <InputField
-                type={"text"}
+                type={'text'}
                 value={inputValue2}
                 placeholder="Enter First Name"
-                onChangeText={(text) => setInputValue2(text)}
+                onChangeText={(text: string) => setInputValue2(text)}
               />
             </Input>
 
@@ -61,7 +67,7 @@ const InputDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

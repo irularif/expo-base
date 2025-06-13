@@ -1,16 +1,14 @@
-import React from "react";
-import { Spinner } from "@pkgs/components/spinner";
-import colors from "tailwindcss/colors";
-import { Center } from "@pkgs/components/center";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { examples } from "@app/docs/examples/spinner";
-import { Text } from "@pkgs/components/text";
-import { Box } from "@pkgs/components/box";
+import { Box, Center, ScrollView, Spinner, Text } from '@pkgs/ui';
+import React from 'react';
+import colors from 'tailwindcss/colors';
+import { examples } from '@app/docs/examples/spinner';
 
 const SpinnerDemo = () => {
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-50 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -24,7 +22,7 @@ const SpinnerDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

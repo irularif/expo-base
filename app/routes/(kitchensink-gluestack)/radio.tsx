@@ -1,25 +1,27 @@
-import React from "react";
 import {
+  Box,
+  Center,
+  CircleIcon,
   Radio,
   RadioGroup,
   RadioIcon,
   RadioIndicator,
   RadioLabel,
-} from "@pkgs/components/radio";
-import { CircleIcon } from "@pkgs/components/icon";
-import { VStack } from "@pkgs/components/vstack";
-import { Center } from "@pkgs/components/center";
-import { Text } from "@pkgs/components/text";
-import { Box } from "@pkgs/components/box";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { examples } from "@app/docs/examples/radio";
+  ScrollView,
+  Text,
+  VStack,
+} from '@pkgs/ui';
+import React from 'react';
+import { examples } from '@app/docs/examples/radio';
 
 const RadioDemo = () => {
-  const [values, setValues] = React.useState("");
+  const [values, setValues] = React.useState('');
 
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-50 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -58,7 +60,7 @@ const RadioDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}

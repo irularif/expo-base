@@ -1,21 +1,25 @@
-import React from "react";
-import { Pressable } from "@pkgs/components/pressable";
-import { Text } from "@pkgs/components/text";
-import { Center } from "@pkgs/components/center";
-import { Box } from "@pkgs/components/box";
-import { Image } from "@pkgs/components/image";
-import { BadgeText } from "@pkgs/components/badge";
-import { VStack } from "@pkgs/components/vstack";
-import { Badge } from "@pkgs/components/badge";
-import { ScrollView } from "@pkgs/components/scroll-view";
-import { examples } from "@app/docs/examples/pressable";
+import {
+  Badge,
+  BadgeText,
+  Box,
+  Center,
+  Image,
+  Pressable,
+  ScrollView,
+  Text,
+  VStack,
+} from '@pkgs/ui';
+import React from 'react';
+import { examples } from '@app/docs/examples/pressable';
 
 const PressableDemo = () => {
   const [pressed, setPressed] = React.useState(false);
 
   return (
     <ScrollView
-      className={`bg-background-0 ${examples?.length > 0 ? "" : "web:justify-center"}`}
+      className={`bg-background-0 ${
+        examples?.length > 0 ? '' : 'web:justify-center'
+      }`}
       contentContainerClassName="px-3 pb-6"
     >
       <Box className="p-5 rounded-lg m-3 mt-5 bg-background-50 gap-5 min-h-[200px] max-w-[600px] lg:min-w-[700px] w-full self-center">
@@ -24,7 +28,9 @@ const PressableDemo = () => {
         </Text>
         <Center className="flex-1">
           <Pressable
-            className={`p-6 max-w-[336px] w-full shadow-hard-5 rounded-lg bg-background-0 border border-outline-100 gap-5 flex flex-row ${pressed ? "scale-95" : ""}`}
+            className={`p-6 max-w-[336px] w-full shadow-hard-5 rounded-lg bg-background-0 border border-outline-100 gap-5 flex flex-row ${
+              pressed ? 'scale-95' : ''
+            }`}
             onPressIn={() => setPressed(true)}
             onPressOut={() => setPressed(false)}
           >
@@ -32,7 +38,7 @@ const PressableDemo = () => {
               <Image
                 className="w-[94px] h-auto aspect-[534/164]"
                 source={{
-                  uri: "https://i.imgur.com/w4N0SUz.png",
+                  uri: 'https://i.imgur.com/w4N0SUz.png',
                 }}
                 alt="image"
               />
@@ -55,7 +61,7 @@ const PressableDemo = () => {
 
       {examples?.length > 0 &&
         examples.map((Example: any, index: any) => {
-          const isFunctionComponent = typeof Example.Code === "function"; // Check if Code is a function
+          const isFunctionComponent = typeof Example.Code === 'function'; // Check if Code is a function
           return (
             <Box
               key={index}
