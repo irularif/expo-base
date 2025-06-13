@@ -4,23 +4,31 @@ module.exports = function (api) {
   return {
     presets: [
       [
-        "babel-preset-expo",
+        'babel-preset-expo',
         {
-          jsxImportSource: "nativewind",
+          jsxImportSource: 'nativewind',
         },
       ],
-      "nativewind/babel",
+      'nativewind/babel',
     ],
 
     plugins: [
       [
-        "module-resolver",
+        'module-resolver',
         {
-          root: ["./"],
+          root: ['./'],
           alias: {
-            "@": "./",
-            "tailwind.config": "./tailwind.config.js",
+            '@app': './app',
+            '@pkgs/ui': './pkgs/ui',
+            '@pkgs/constants': './pkgs/constants',
+            '@pkgs/hooks': './pkgs/hooks',
+            '@pkgs/providers': './pkgs/providers',
+            '@pkgs/config': './pkgs/config',
+            '@pkgs/utils': './pkgs/utils',
+            '@assets': './app/assets',
+            'tailwind.config': './tailwind.config.js',
           },
+          extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
         },
       ],
     ],

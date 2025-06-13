@@ -1,6 +1,6 @@
-import { AppTheme } from "@pkgs/stores/config";
-import { FontSource } from "expo-font";
-import type { ReactNode } from "react";
+import { AppTheme } from '../constants/Theme';
+import { FontSource } from 'expo-font';
+import type { ReactNode } from 'react';
 
 export interface IProvider {
   children?: ReactNode;

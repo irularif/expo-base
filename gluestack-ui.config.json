@@ -4,7 +4,7 @@
     "css": "./app/assets/global.css"
   },
   "app": {
-    "entry": "./app/pages/_layout.tsx",
-    "components": "./pkgs/components"
+    "entry": "./app/routes/_layout.tsx",
+    "components": "./pkgs/vendor/gluestack-ui"
   }
 }

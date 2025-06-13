@@ -1,11 +1,8 @@
-import queryClient from "@pkgs/config/query";
-import { IProvider } from "@pkgs/types/provider";
-import NetInfo from "@react-native-community/netinfo";
-import {
-  QueryClientProvider,
-  onlineManager
-} from "@tanstack/react-query";
-import React from "react";
+import { queryClient } from '../config/query';
+import { IProvider } from '../types/provider';
+import NetInfo from '@react-native-community/netinfo';
+import { QueryClientProvider, onlineManager } from '@tanstack/react-query';
+import React from 'react';
 
 onlineManager.setEventListener((setOnline) => {
   return NetInfo.addEventListener((state) => {

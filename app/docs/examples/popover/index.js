@@ -1,16 +1,13 @@
-import React from "react";
+import React from 'react';
 import {
   ArrowRightIcon,
   CheckIcon,
   ChevronDownIcon,
   ChevronRightIcon,
   ShareIcon,
-} from "@pkgs/components/icon";
-import { VStack } from "@pkgs/components/vstack";
-import { Text } from "@pkgs/components/text";
-import { Pressable } from "@pkgs/components/pressable";
-
-import {
+  VStack,
+  Text,
+  Pressable,
   Popover,
   PopoverBackdrop,
   PopoverArrow,
@@ -18,29 +15,28 @@ import {
   PopoverHeader,
   PopoverBody,
   PopoverContent,
-} from "@pkgs/components/popover";
-
-import { Input, InputField } from "@pkgs/components/input";
-import { Image } from "@pkgs/components/image";
-import { HStack } from "@pkgs/components/hstack";
-import { Heading } from "@pkgs/components/heading";
-import {
+  Input,
+  InputField,
+  Image,
+  HStack,
+  Heading,
   Checkbox,
   CheckboxIndicator,
   CheckboxLabel,
   CheckboxIcon,
   CheckboxGroup,
-} from "@pkgs/components/checkbox";
-import { Button, ButtonText, ButtonIcon } from "@pkgs/components/button";
-import {
+  Button,
+  ButtonText,
+  ButtonIcon,
   Avatar,
   AvatarFallbackText,
   AvatarImage,
   AvatarGroup,
-} from "@pkgs/components/avatar";
+} from '@pkgs/ui';
+
 export const examples = [
   {
-    name: "Popover used along with multiple Avatars",
+    name: 'Popover used along with multiple Avatars',
     Code: function App() {
       const [isOpen, setIsOpen] = React.useState(false);
       const handleOpen = () => {
@@ -74,7 +70,7 @@ export const examples = [
                   <AvatarFallbackText>John Doe</AvatarFallbackText>
                   <AvatarImage
                     source={{
-                      uri: "https://i.ibb.co/PF4vFQk/a130347c432c7b83615044cec215d824.jpg",
+                      uri: 'https://i.ibb.co/PF4vFQk/a130347c432c7b83615044cec215d824.jpg',
                     }}
                     alt="imageAltText"
                   />
@@ -82,21 +78,21 @@ export const examples = [
                 <Avatar className="w-9 h-9 border-[1.5px] border-outline-0">
                   <AvatarFallbackText>John Doe</AvatarFallbackText>
                   <AvatarImage
-                    source={{ uri: "https://i.ibb.co/MgrMrRc/Avatar-2.png" }}
+                    source={{ uri: 'https://i.ibb.co/MgrMrRc/Avatar-2.png' }}
                     alt="imageAltText"
                   />
                 </Avatar>
                 <Avatar className="w-9 h-9 border-[1.5px] border-outline-0">
                   <AvatarFallbackText>John Doe</AvatarFallbackText>
                   <AvatarImage
-                    source={{ uri: "https://i.ibb.co/BLRZt0p/Avatar-6.jpg" }}
+                    source={{ uri: 'https://i.ibb.co/BLRZt0p/Avatar-6.jpg' }}
                     alt="imageAltText"
                   />
                 </Avatar>
                 <Avatar className="w-9 h-9 border-[1.5px] border-outline-0 group-[.avatar-group]/avatar-group:ml-0">
                   <AvatarFallbackText>John Doe</AvatarFallbackText>
                   <AvatarImage
-                    source={{ uri: "https://i.ibb.co/4VVsQ0K/Avatar-7.png" }}
+                    source={{ uri: 'https://i.ibb.co/4VVsQ0K/Avatar-7.png' }}
                     alt="imageAltText"
                   />
                 </Avatar>
@@ -112,10 +108,10 @@ export const examples = [
     },
   },
   {
-    name: "Popover with CTA",
+    name: 'Popover with CTA',
     Code: function App() {
       const [isOpen, setIsOpen] = React.useState(false);
-      const [values, setValues] = React.useState(["work"]);
+      const [values, setValues] = React.useState(['work']);
       const handleOpen = () => {
         setIsOpen(true);
       };
@@ -188,7 +184,7 @@ export const examples = [
     },
   },
   {
-    name: "Popover with Image",
+    name: 'Popover with Image',
     Code: function App() {
       const [isOpen, setIsOpen] = React.useState(false);
       const handleOpen = () => {
@@ -219,7 +215,7 @@ export const examples = [
             >
               <Image
                 source={{
-                  uri: "https://i.ibb.co/TqD9vBY/popover-image-1-11zon.jpg",
+                  uri: 'https://i.ibb.co/TqD9vBY/popover-image-1-11zon.jpg',
                 }}
                 alt="image"
                 className="sm:h-[270px] sm:w-[211px] h-[150px] w-full"
@@ -245,7 +241,7 @@ export const examples = [
     },
   },
   {
-    name: "Popover with InputField",
+    name: 'Popover with InputField',
     Code: function App() {
       const [isOpen, setIsOpen] = React.useState(false);
       const handleOpen = () => {
@@ -289,7 +285,7 @@ export const examples = [
                         <AvatarFallbackText>JC</AvatarFallbackText>
                         <AvatarImage
                           source={{
-                            uri: "https://i.ibb.co/7R4DyhQ/Avatar-1.jpg",
+                            uri: 'https://i.ibb.co/7R4DyhQ/Avatar-1.jpg',
                           }}
                           alt="imageAltText"
                         />
@@ -319,7 +315,7 @@ export const examples = [
                         <AvatarFallbackText>JC</AvatarFallbackText>
                         <AvatarImage
                           source={{
-                            uri: "https://i.ibb.co/sQwcjSZ/Avatar-2.png",
+                            uri: 'https://i.ibb.co/sQwcjSZ/Avatar-2.png',
                           }}
                           alt="imageAltText"
                         />
@@ -349,7 +345,7 @@ export const examples = [
                         <AvatarFallbackText>JC</AvatarFallbackText>
                         <AvatarImage
                           source={{
-                            uri: "https://i.ibb.co/XXkHzcZ/Avatar-3.png",
+                            uri: 'https://i.ibb.co/XXkHzcZ/Avatar-3.png',
                           }}
                         />
                       </Avatar>

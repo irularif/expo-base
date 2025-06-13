@@ -1,7 +1,7 @@
-import useAppProviderState from "@pkgs/store/useAppProviderState";
-import { IAppProvider } from "@pkgs/types/provider";
-import { useFonts } from "expo-font";
-import { useEffect } from "react";
+import { useAppProviderState } from '../store/useAppProviderState';
+import { IAppProvider } from '../types/provider';
+import { useFonts } from 'expo-font';
+import { useEffect } from 'react';
 
 const FontProvider = ({ config = {} }: Partial<IAppProvider>) => {
   const { fonts = {} } = config;
@@ -19,7 +19,7 @@ const FontProvider = ({ config = {} }: Partial<IAppProvider>) => {
     if (loaded) {
       setAppStatus((v) => ({ ...v, isFontReady: true }));
     }
-  }, [loaded]);
+  }, [loaded, setAppStatus]);
 
   return null;
 };

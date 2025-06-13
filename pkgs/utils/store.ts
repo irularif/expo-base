@@ -1,11 +1,12 @@
-import type { AnyUpdater, Listener, NoInfer } from "@tanstack/react-store";
-import { Store, useStore } from "@tanstack/react-store";
-import { isEmpty, isFunction, isObject, omitBy } from "lodash";
-import storage from "./storage";
+/* eslint-disable react-hooks/rules-of-hooks */
+import type { AnyUpdater, Listener } from '@tanstack/react-store';
+import { Store, useStore } from '@tanstack/react-store';
+import { isEmpty, isFunction, isObject, omitBy } from 'lodash';
+import { storage } from './storage';
 
 interface StoreOptions<
   TState,
-  TUpdater extends AnyUpdater = (cb: TState) => TState
+  TUpdater extends AnyUpdater = (cb: TState) => TState,
 > {
   updateFn?: (previous: TState) => (updater: TUpdater) => TState;
   onSubscribe?: (
@@ -56,6 +57,8 @@ export const storeWithLocalStorage = <TState>(
         _store.setState(() => savedData);
       }
     });
-  } catch (error) {}
+  } catch (_) {
+    console.warn(`Failed to load store from local storage with key: ${key}`);
+  }
   return useBound(_store);
 };

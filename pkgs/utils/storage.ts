@@ -1,14 +1,13 @@
-import { isEmpty, isNull } from "lodash";
-import { decrypt, encrypt } from "./encryption";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { get as lodashGet } from "lodash";
+import { isEmpty, isNull, get as lodashGet } from 'lodash';
+import { decrypt, encrypt } from './encryption';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const isDevelopment =
-  lodashGet(process, "env.APP_ENV", "development") !== "production";
+  lodashGet(process, 'env.APP_ENV', 'development') !== 'production';
 
 const set = async (key: string, value: any, encrypted = !isDevelopment) => {
   let _value = value;
-  if (typeof value !== "string") {
+  if (typeof value !== 'string') {
     _value = JSON.stringify(_value);
   }
   if (encrypted) {
@@ -23,7 +22,7 @@ const get = async (key: string, encrypted = !isDevelopment): Promise<any> => {
       _value = decrypt(_value);
     }
     if (!isEmpty(_value) && !isNull(_value)) {
-      _value = JSON.parse(_value ?? "");
+      _value = JSON.parse(_value ?? '');
     }
     return _value;
   } catch (e: unknown) {
@@ -34,10 +33,8 @@ const remove = async (key: string) => {
   await AsyncStorage.removeItem(key);
 };
 
-const storage = {
+export const storage = {
   set,
   get,
   remove,
 };
-
-export default storage;

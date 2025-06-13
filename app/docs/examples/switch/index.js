@@ -1,14 +1,37 @@
-import colors from "tailwindcss/colors";
-import { Text } from "@pkgs/components/text";
-import { Switch } from "@pkgs/components/switch";
-import { HStack } from "@pkgs/components/hstack";
+import colors from 'tailwindcss/colors';
+import { Text, Switch, HStack } from '@pkgs/ui';
 export const examples = [
   {
-    name: "Switch With Label",
-    Code: function Example() { return (<HStack space="md"><Switch trackColor={{ false: colors.gray[300], true: colors.gray[500] }} thumbColor={colors.gray[50]} activeThumbColor={colors.gray[50]} ios_backgroundColor={colors.gray[300]} /><Text size="sm" >Allow notifications</Text></HStack>); }
+    name: 'Switch With Label',
+    Code: function Example() {
+      return (
+        <HStack space="md">
+          <Switch
+            trackColor={{ false: colors.gray[300], true: colors.gray[500] }}
+            thumbColor={colors.gray[50]}
+            activeThumbColor={colors.gray[50]}
+            ios_backgroundColor={colors.gray[300]}
+          />
+          <Text size="sm">Allow notifications</Text>
+        </HStack>
+      );
+    },
   },
   {
-    name: "Checked State",
-    Code: function Example() { return (<HStack space="md"><Switch defaultValue={true} trackColor={{ false: colors.gray[300], true: colors.gray[500] }} thumbColor={colors.gray[50]} activeThumbColor={colors.gray[50]} ios_backgroundColor={colors.gray[300]} /><Text size="sm" >Public profile</Text></HStack>); }
-  }
+    name: 'Checked State',
+    Code: function Example() {
+      return (
+        <HStack space="md">
+          <Switch
+            defaultValue={true}
+            trackColor={{ false: colors.gray[300], true: colors.gray[500] }}
+            thumbColor={colors.gray[50]}
+            activeThumbColor={colors.gray[50]}
+            ios_backgroundColor={colors.gray[300]}
+          />
+          <Text size="sm">Public profile</Text>
+        </HStack>
+      );
+    },
+  },
 ];

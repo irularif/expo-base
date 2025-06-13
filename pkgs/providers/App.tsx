@@ -1,19 +1,23 @@
-import { PortalProvider } from "@gorhom/portal";
-import useAppProviderState from "@pkgs/store/useAppProviderState";
-import { IProvider } from "@pkgs/types/provider";
-import * as SplashScreen from "expo-splash-screen";
-import { find, isEmpty, omit } from "lodash";
-import React, { useCallback, useEffect, useMemo } from "react";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { Show } from "@pkgs/components/renderer";
-import FontProvider from "./Font";
-import QueryProvider from "./Query";
-import { ThemeProvider } from "./Theme";
+import { PortalProvider } from '@gorhom/portal';
+import { useAppProviderState } from '../store/useAppProviderState';
+import { IProvider } from '../types/provider';
+import * as SplashScreen from 'expo-splash-screen';
+import { find, isEmpty, omit } from 'lodash';
+import React, { useCallback, useEffect, useMemo } from 'react';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { Show } from '../ui/renderer';
+import FontProvider from './Font';
+import QueryProvider from './Query';
+import { ThemeProvider } from './Theme';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
-const AppProvider = ({ children, config = {}, onAppReady }: IProvider) => {
+export const AppProvider = ({
+  children,
+  config = {},
+  onAppReady,
+}: IProvider) => {
   const { preventAutoHide = false } = config;
   const appStatus = useAppProviderState();
   const setAppStatus = useAppProviderState.setState;
@@ -24,14 +28,14 @@ const AppProvider = ({ children, config = {}, onAppReady }: IProvider) => {
   );
 
   const runAppReady = useCallback(async () => {
-    const isReady = !isEmpty(find(omit(appStatus, ["isInitReady"]), (v) => !v));
+    const isReady = !isEmpty(find(omit(appStatus, ['isInitReady']), (v) => !v));
     if (isReady) {
       if (onAppReady) {
         await onAppReady();
       }
       setAppStatus((v) => ({ ...v, isInitReady: true }));
     }
-  }, [appStatus, onAppReady]);
+  }, [appStatus, onAppReady, setAppStatus]);
 
   useEffect(() => {
     if (isReady && !preventAutoHide) {
@@ -39,11 +43,11 @@ const AppProvider = ({ children, config = {}, onAppReady }: IProvider) => {
         SplashScreen.hideAsync();
       }, 500);
     }
-  }, [isReady]);
+  }, [isReady, preventAutoHide]);
 
   useEffect(() => {
     runAppReady();
-  }, []);
+  }, [runAppReady]);
 
   return (
     <GestureHandlerRootView>
@@ -58,5 +62,3 @@ const AppProvider = ({ children, config = {}, onAppReady }: IProvider) => {
     </GestureHandlerRootView>
   );
 };
-
-export default AppProvider;

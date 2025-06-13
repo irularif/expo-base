@@ -2,19 +2,27 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
+    "module": "ESNext",
     "paths": {
       "@app/*": ["./app/*"],
-      "@pkgs/*": ["./pkgs/*"],
+      "@pkgs/ui": ["./pkgs/ui"],
+      "@pkgs/config": ["./pkgs/config"],
+      "@pkgs/constants": ["./pkgs/constants"],
+      "@pkgs/hooks": ["./pkgs/hooks"],
+      "@pkgs/providers": ["./pkgs/providers"],
+      "@pkgs/utils": ["./pkgs/utils"],
+      "types/pkgs/*": ["./pkgs/types/*"],
       "@assets/*": ["./app/assets/*"],
-      "types/*": ["./pkgs/types/*"],
       "tailwind.config": ["./tailwind.config.js"]
     }
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
+    "./pkgs/types/**/*.d.ts",
     ".expo/types/**/*.ts",
     "expo-env.d.ts",
-    "nativewind-env.d.ts"
+    "nativewind-env.d.ts",
+    "global.d.ts"
   ]
 }

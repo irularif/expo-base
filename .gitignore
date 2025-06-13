@@ -41,3 +41,7 @@ app-example
 /ios
 
 *DS_Store
+
+credentials/
+credentials.json
+*.apk

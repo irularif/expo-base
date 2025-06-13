@@ -1,11 +1,10 @@
 {
   "cli": {
-    "version": "latest",
     "appVersionSource": "remote"
   },
   "build": {
     "base": {
-      "bun": "latest",
+      "bun": "1.2.15",
       "credentialsSource": "remote",
       "android": {
         "image": "latest"

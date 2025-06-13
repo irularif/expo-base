@@ -1,4 +1,4 @@
-import { store } from "@pkgs/utils/store";
+import { store } from '../utils/store';
 
 export interface IUseAppProviderState {
   isFontReady: boolean;
@@ -11,8 +11,4 @@ const initialAppProviderState: IUseAppProviderState = {
   isThemeReady: false,
   isInitReady: false,
 };
-const useAppProviderState = store(
-  initialAppProviderState
-);
-
-export default useAppProviderState;
+export const useAppProviderState = store(initialAppProviderState);

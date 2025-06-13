@@ -1,8 +1,8 @@
-import { AppColorScheme } from "@pkgs/constants/Theme";
-import useAppConfigState from "@pkgs/store/useAppConfigState";
-import { useCallback } from "react";
+import { AppColorScheme } from '../constants/Theme';
+import { useAppConfigState } from '../store/useAppConfigState';
+import { useCallback } from 'react';
 
-const useAppConfig = () => {
+export const useAppConfig = () => {
   const appConfig = useAppConfigState();
   const setColorScheme = useCallback((scheme: AppColorScheme) => {
     useAppConfigState.setState((prev) => ({
@@ -16,5 +16,3 @@ const useAppConfig = () => {
     setColorScheme,
   };
 };
-
-export default useAppConfig;
