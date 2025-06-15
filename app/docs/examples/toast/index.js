@@ -5,7 +5,6 @@ import {
   CloseIcon,
   HelpCircleIcon,
   VStack,
-  useToast,
   Toast,
   ToastTitle,
   ToastDescription,
@@ -22,6 +21,7 @@ import {
   AvatarFallbackText,
   AvatarImage,
 } from '@pkgs/ui';
+import { useToast } from '@pkgs/hooks';
 export const examples = [
   {
     name: 'Toast in note talking platform',

@@ -10,11 +10,11 @@ import {
   Toast,
   ToastDescription,
   ToastTitle,
-  useToast,
   VStack,
 } from '@pkgs/ui';
 import React from 'react';
 import { examples } from '@app/docs/examples/toast';
+import { useToast } from '@pkgs/hooks';
 
 const ToastDemo = () => {
   const toast = useToast();
